@@ -25,5 +25,8 @@ Vue.component('my-menu', MyMenu)
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin: 0px auto;
+  padding: 0px;
+  max-width: 960px;
 }
 </style>
