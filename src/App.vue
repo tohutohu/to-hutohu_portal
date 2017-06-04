@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <my-menu></my-menu>
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+<div id="app">
+  <my-menu></my-menu>
+  <img src="./assets/logo.png">
+  <router-view></router-view>
+</div>
 </template>
 
 <script>
@@ -18,6 +18,10 @@ Vue.component('my-menu', MyMenu)
 </script>
 
 <style>
+html{
+  overflow-y: scroll;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
