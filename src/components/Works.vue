@@ -23,9 +23,9 @@ export default{
   },
   created: function () {
     console.log('po')
-    axios.get('/static/json/works.json')
+    axios.get('/static/json/works-list.json')
     .then(data => {
-      this.works = data.data.data
+      this.works = data.data
     })
   }
 }
@@ -37,5 +37,7 @@ Vue.component('work', Work)
 #works{
   padding: 0px;
   display: flex;
+  flex-wrap: wrap;
 }
+
 </style>

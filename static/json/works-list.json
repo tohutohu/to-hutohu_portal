@@ -1,0 +1,38 @@
+[
+  {
+    "title": "hoge title",
+    "summary": "hoge summary",
+    "thumbnail": "/static/thumbs/test.png",
+    "date": "2017-06-05",
+    "tags": [
+      "hoge",
+      "huga",
+      "poyo"
+    ],
+    "url": "/static/json/works/sample2.json"
+  },
+  {
+    "title": "hoge title",
+    "summary": "hoge summary",
+    "thumbnail": "/static/thumbs/test.png",
+    "date": "2017-06-05",
+    "tags": [
+      "hoge",
+      "huga",
+      "poyo"
+    ],
+    "url": "/static/json/works/sample3.json"
+  },
+  {
+    "title": "hoge title",
+    "summary": "hoge summary",
+    "thumbnail": "/static/thumbs/test.png",
+    "date": "1999-06-05",
+    "tags": [
+      "hoge",
+      "huga",
+      "poyo"
+    ],
+    "url": "/static/json/works/sample.json"
+  }
+]

@@ -1,7 +1,7 @@
 <template>
 <span>
-  <li class="work" @click="showModal=true">
-    <div class="image-box"><img class="img" :src="data.thumbnail[0]" alt="thumbnail"></div>
+  <li class="work" @click="openModal()">
+    <div class="image-box"><img class="img" :src="data.thumbnail" alt="thumbnail"></div>
     <div class="contain">
       <div class="title">{{data.title}}</div>
       <div class="summary">{{data.summary}}</div>
@@ -9,12 +9,23 @@
       <div class="tag-label"><tag class="tag" v-for="tag in data.tags" :tagName="tag">{{tag}}</tag></div>
     </div>
   </li>
-  <modal v-if="showModal" @close="showModal=false">popopo</modal>
+  <modal class="window" v-if="showModal" @close="showModal=false">
+    <div class="modal">
+      <div class="image-box"><img class="img" :src="detail.images[0]" alt="thumbnail"></div>
+      <div class="contain">
+        <div class="title">{{detail.title}}</div>
+        <div class="description">{{detail.description}}</div>
+        <div class="date">{{detail.date}}</div>
+        <div class="tag-label"><tag class="tag" v-for="tag in detail.tags" :tagName="tag">{{tag}}</tag></div>
+      </div>
+    </div>
+  </modal>
 </span>
 </template>
 
 <script>
 import Modal from '@/components/Modal'
+import axios from 'axios'
 
 const Tag = {
   props: ['tagName'],
@@ -26,7 +37,8 @@ export default {
   props: ['data'],
   data: function () {
     return {
-      showModal: false
+      showModal: false,
+      detail: null
     }
   },
   created: function () {
@@ -35,6 +47,17 @@ export default {
   components: {
     'tag': Tag,
     'modal': Modal
+  },
+  methods: {
+    openModal: function () {
+      if (!this.detail) {
+        axios.get(this.data.url)
+        .then(data => {
+          this.detail = data.data
+        })
+      }
+      this.showModal = true
+    }
   }
 }
 </script>
@@ -47,7 +70,7 @@ export default {
   background-color: #f0f0f0;
   margin: 10px;
   padding: 5px;
-  width: 460px;
+  width: 440px;
   cursor: pointer;
   transition: all 0.2s;
   transition-timing-function: ease-in-out;
@@ -85,6 +108,10 @@ export default {
     height:100%
   }
 
+  .description{
+    height: 100%;
+  }
+
   .date{
     text-align: right;
     font-size: 0.4em;
@@ -105,6 +132,22 @@ export default {
       font-size: 0.8em;
       padding: 2px 5px;
       background-color: #ddd;
+    }
+  }
+}
+
+.modal{
+  width: 600px;
+  display: flex;
+  .image-box{
+    width: 400px;
+    height: 350px;
+    .img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      background-color: #fff;
     }
   }
 }

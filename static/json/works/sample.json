@@ -1,0 +1,15 @@
+{
+  "title": "hoge title",
+  "summary": "hoge summary",
+  "description": "hoge description\nunti \npoyo poyo\n",
+  "images": [
+    "/static/images/test.png",
+    "/static/images/test2.png"
+  ],
+  "date": "1999-06-05",
+  "tags": [
+    "hoge",
+    "huga",
+    "poyo"
+  ]
+}

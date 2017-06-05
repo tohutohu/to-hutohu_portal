@@ -1,0 +1,9 @@
+title: 'hoge title'
+summary: 'hoge summary'
+description: |
+  hoge description
+  unti 
+  poyo poyo
+images: ['test.png', 'test2.png']
+date: '2017-06-05'
+tags: ['hoge', 'huga', 'poyo']

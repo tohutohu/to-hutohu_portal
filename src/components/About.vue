@@ -18,6 +18,7 @@
     Vue.jsで作ってます。<br>
     ちゃんとしたサイトを作るのが初めてなのでググりまくって苦しみながら作ってます。<br>
     最終的には、ブログができる静的サイトジェネレーターまで含めたデカイシステムができたらいいなあと企んでいます。<br>
+    GitHub Pages上でホスティングしています。リポジトリは <a href="https://github.com/tohutohu/to-hutohu_potal" target="_blank">こちら</a><br>
   </div>
   <h2>記録</h2>
   <ul>
