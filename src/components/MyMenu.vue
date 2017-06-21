@@ -16,19 +16,23 @@ export default{
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 $color:#234;
 #menu{
   padding: auto;
   display: flex;
   justify-content: center;
+  width:100%;
   ul{
     display: flex;
     padding: 0px;
+    flex-flow: wrap;
+    width: 100%;
+    max-width: 900px;
     li{
       padding: 15px;
+      flex-grow: 1;
       list-style: none;
-      width: 150px;
       background-color: $color;
       color: #fff;
       cursor: pointer;

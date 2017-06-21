@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import Top from '@/components/Top'
 import About from '@/components/About'
 import Works from '@/components/Works'
-import Blog from '@/components/Blog'
+import BlogList from '@/components/BlogList'
 import Contact from '@/components/Contact'
+import Article from '@/components/Article'
 
 Vue.use(Router)
 
@@ -29,11 +30,21 @@ export default new Router({
     {
       path: '/blog',
       name: 'Blog',
-      component: Blog
+      component: BlogList
+    },
+    {
+      path: '/poyo',
+      name: 'poyo',
+      conponent: Article
     },
     {
       path: '/contact',
       name: 'Contact',
+      component: Contact
+    },
+    {
+      path: '*',
+      name: '404',
       component: Contact
     }
   ]

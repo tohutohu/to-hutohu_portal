@@ -6,7 +6,7 @@
       <div class="title">{{data.title}}</div>
       <div class="summary">{{data.summary}}</div>
       <div class="date">{{data.date}}</div>
-      <div class="tag-label"><tag class="tag" v-for="tag in data.tags" :tagName="tag">{{tag}}</tag></div>
+      <div class="tag-label"><tag class="tag" v-for="tag in data.tags" :key="tag" :tagName="tag">{{tag}}</tag></div>
     </div>
   </li>
   <modal class="window" v-if="showModal" @close="showModal=false">
@@ -16,7 +16,7 @@
         <div class="title">{{detail.title}}</div>
         <div class="description">{{detail.description}}</div>
         <div class="date">{{detail.date}}</div>
-        <div class="tag-label"><tag class="tag" v-for="tag in detail.tags" :tagName="tag">{{tag}}</tag></div>
+        <div class="tag-label"><tag class="tag" v-for="tag in detail.tags" :key="tag" :tagName="tag">{{tag}}</tag></div>
       </div>
     </div>
   </modal>
